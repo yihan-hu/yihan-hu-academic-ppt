@@ -1,0 +1,13 @@
+interface:
+  display_name: Academic PPT
+  short_description: 完整继承 Guizang PPT 原规则与模板，再叠加科研信息保真、学术叙事、机构品牌 overlay、fidelity-first
+    PPTX 与可打开性 QA。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
