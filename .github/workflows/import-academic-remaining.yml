@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat .import/xm* | base64 --decode > /tmp/academic-remaining.tar.xz
+          cat .import/xs* | base64 --decode > /tmp/academic-remaining.tar.xz
           tar -xJf /tmp/academic-remaining.tar.xz
           rm -rf .import
           rm -f .github/workflows/import-guizang-baseline.yml
