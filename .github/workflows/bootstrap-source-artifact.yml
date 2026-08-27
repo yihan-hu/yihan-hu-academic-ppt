@@ -1,0 +1,33 @@
+name: Bootstrap Academic PPT source artifact
+
+on:
+  push:
+    paths:
+      - .github/bootstrap-source-request.txt
+
+permissions:
+  contents: read
+
+tasks: {}
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify source package
+        shell: bash
+        run: |
+          set -euo pipefail
+          url="$(sed -n '1p' .github/bootstrap-source-request.txt)"
+          expected_size="$(sed -n '2p' .github/bootstrap-source-request.txt)"
+          expected_md5="$(sed -n '3p' .github/bootstrap-source-request.txt)"
+          curl --fail --location --silent --show-error "$url" --output /tmp/skill.zip
+          test "$(wc -c < /tmp/skill.zip | tr -d ' ')" = "$expected_size"
+          echo "$expected_md5  /tmp/skill.zip" | md5sum -c -
+      - name: Upload source package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: academic-ppt-source-bootstrap
+          path: /tmp/skill.zip
+          if-no-files-found: error
