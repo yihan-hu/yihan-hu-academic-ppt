@@ -17,6 +17,7 @@ GENERATED_FIGURE_KINDS = {
     'cohort-flow', 'estimand-diagram', 'causal-schematic', 'graphical-summary'
 }
 QUANTITATIVE_GENERATED_FIGURES = {'forest-plot', 'effect-plot'}
+CANVA_EDITABLE_FIGURE_KINDS = GENERATED_FIGURE_KINDS - QUANTITATIVE_GENERATED_FIGURES
 
 
 ESTIMATE_RE = re.compile(r"\b\d+(?:\.\d+)?\s*\(\s*\d+(?:\.\d+)?\s*[–-]\s*\d+(?:\.\d+)?\s*\)")
@@ -279,11 +280,29 @@ def main():
             errors.append(f'Slide {idx}: content heuristics indicate whitelist figure {inferred_figure_kind!r}, but figureKind is omitted. Classify before drawing; omission is not a native escape hatch.')
         effective_figure_kind = declared_figure_kind or inferred_figure_kind
         native_exception = bool(slide.get('allowNativeFigure'))
+        editable_workflow = str(slide.get('editableFigureWorkflow') or '').strip()
+        if editable_workflow and editable_workflow not in {'canva-magic-layers', 'native-pptx'}:
+            errors.append(f'Slide {idx}: unsupported editableFigureWorkflow {editable_workflow!r}; use "canva-magic-layers" or "native-pptx"')
         if native_exception:
             if slide.get('userRequestedFullEditability') is not True:
                 errors.append(f'Slide {idx}: allowNativeFigure requires userRequestedFullEditability=true')
             if not str(slide.get('nativeFigureReason') or '').strip():
                 errors.append(f'Slide {idx}: allowNativeFigure requires a non-empty nativeFigureReason')
+            if editable_workflow and editable_workflow != 'native-pptx':
+                errors.append(f'Slide {idx}: allowNativeFigure cannot be combined with editableFigureWorkflow={editable_workflow!r}')
+        if editable_workflow == 'native-pptx' and not native_exception:
+            errors.append(f'Slide {idx}: editableFigureWorkflow="native-pptx" requires allowNativeFigure=true')
+        if editable_workflow == 'canva-magic-layers':
+            if effective_figure_kind not in CANVA_EDITABLE_FIGURE_KINDS:
+                errors.append(f'Slide {idx}: Canva Magic Layers is allowed only for non-quantitative explanatory whitelist figures; got figureKind={effective_figure_kind!r}')
+            if not generated_figures:
+                errors.append(f'Slide {idx}: Canva Magic Layers requires the canonical coherent role=generated-figure image to remain present in the deck spec')
+            if not str(slide.get('editableFigureSource') or '').strip():
+                errors.append(f'Slide {idx}: Canva Magic Layers requires editableFigureSource provenance for the exact source image')
+            if not str(slide.get('canvaDesignId') or '').strip():
+                errors.append(f'Slide {idx}: Canva Magic Layers requires canvaDesignId after image-to-design creates the editable companion')
+        if slide.get('powerPointEditabilityVerified') is True and editable_workflow not in {'canva-magic-layers', 'native-pptx'}:
+            errors.append(f'Slide {idx}: powerPointEditabilityVerified=true requires an explicit editableFigureWorkflow')
         if effective_figure_kind in GENERATED_FIGURE_KINDS and not generated_figures and not native_exception:
             errors.append(f'Slide {idx}: whitelist figure {effective_figure_kind} must be a generated/preserved picture object by default; found {shape_line_count} native shape/line primitives and no role=generated-figure image')
 

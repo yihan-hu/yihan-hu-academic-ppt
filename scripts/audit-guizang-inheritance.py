@@ -19,7 +19,7 @@ required=[
  'references/academic-overlay.md','references/academic-content-mapping.md','references/brand-overlay.md','references/brand-profile.md',
  'references/brands/ki.json','references/brands/ki-swiss.json','references/brands/ki-editorial.json','references/ki-templates.md',
  'assets/template-ki-swiss.html','assets/template-ki-editorial.html','assets/brands/ki-logo-white.png','assets/brands/ki-logo-accent.png',
- 'references/scientific-fidelity.md','references/scientific-figures-tables.md','references/figure-generation-whitelist.md','references/narrative-patterns.md',
+ 'references/scientific-fidelity.md','references/scientific-figures-tables.md','references/figure-generation-whitelist.md','references/canva-editable-figures.md','references/narrative-patterns.md',
  'references/pptx-fidelity.md','references/deck-spec.md','references/quality-checklist.md',
  'scripts/inspect-brand-template.py','scripts/apply-brand-profile.py','scripts/check-brand-token-lock.py','scripts/check-ki-template-lock.py',
  'scripts/finalize-pptx.py','scripts/capture-guizang-visual-plates.py','scripts/check-visual-plate-fidelity.py',

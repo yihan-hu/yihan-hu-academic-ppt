@@ -21,7 +21,10 @@
 - Check palette roles: secondary text should be neutral grey, panel/table fill should be very pale, and `#D9D9D9` should not become a broad card color.
 - Forest/effect plots generated from data are deterministic and preserve every plotted estimate/interval/reference line/label.
 - Methods/study-design/conceptual/state/cohort illustrations may be single generated figures; slide title/body/footer remain native.
-- A whitelisted figure is not assembled from dozens of PowerPoint primitives unless the user explicitly requested full editability and the spec records the exception.
+- A whitelisted figure is not assembled from dozens of PowerPoint primitives unless the user explicitly requested full **PowerPoint** editability and the spec records the native exception.
+- If `editableFigureWorkflow: "canva-magic-layers"` is used, the figure is non-quantitative/explanatory, the exact source image sent to Canva is recorded, and a returned Canva design ID is present. The final PPTX may still contain the coherent image.
+- Canva Magic Layers is never used to reconstruct forest/effect plots, exact axes/ticks, CI/CrI geometry, risk tables, KM-style curves, Love/balance plots, or any other quantitative evidence encoding.
+- Never mark `powerPointEditabilityVerified: true` merely because a Canva design exists; verify selectability/editability in the exported PPTX separately if PowerPoint-native editability is claimed.
 - Final `scripts/check-pptx-layout-integrity.py` must reject likely forest/effect/methods/state illustrations that still have many native primitives but no real figure picture.
 - No axis, legend, risk table, panel label, or meaningful annotation is cropped.
 - Labels are readable on a projector.

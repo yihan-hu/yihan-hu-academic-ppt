@@ -29,6 +29,16 @@ Scientific figures may remain image evidence (`type: image`, `role: evidence`) w
 
 Read `references/figure-generation-whitelist.md`. A whitelisted scientific figure may be one image object (`role: "generated-figure"`) even when it contains internal figure labels and result values. Quantitative forest/effect plots must be rendered deterministically from verified values. This is a figure object, not a full-slide rasterization.
 
+### Editable explanatory figures via Canva
+
+When the user explicitly wants to edit the internals of a **non-quantitative explanatory figure**, read `references/canva-editable-figures.md`. Canva Magic Layers may create an editable companion design from the coherent figure image. Keep these contracts separate:
+
+- **Canva editability:** the decomposed design can be edited in Canva; record the returned design ID and source image provenance.
+- **PPTX editability:** remains unverified unless a subsequent Canva PPTX export is opened and the intended internal objects are confirmed selectable/editable. Do not treat a Canva design ID as PowerPoint-native evidence.
+- **Scientific fidelity:** quantitative/statistical figures and any exact evidence geometry bypass Canva decomposition entirely.
+
+The default deliverable may therefore contain the coherent figure image in PowerPoint plus an optional editable Canva companion.
+
 ## KI Editorial color boundary
 
 - `#4F0433` = dark editorial field / dark hero background.

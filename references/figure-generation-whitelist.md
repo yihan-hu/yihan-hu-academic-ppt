@@ -28,7 +28,12 @@ A whitelist hit is **generation-required by default**. Use one coherent `type: "
 
 Generated figures with embedded text must also follow `references/figure-render-qa.md`: validate text layout in a figure-only raster preview, then re-check the figure after PPTX/Office rendering. Do not accept source SVG appearance as the final QA state.
 
-The only native exception is when the user explicitly requests full editability of that specific figure. Then set all three: `allowNativeFigure: true`, `userRequestedFullEditability: true`, and a non-empty `nativeFigureReason`.
+If the user explicitly requests editability of that specific figure, choose the editability route before drawing it:
+
+- **Native PowerPoint route:** use only when the figure is simple enough to preserve meaning with native shapes/text. Set `allowNativeFigure: true`, `userRequestedFullEditability: true`, and a non-empty `nativeFigureReason`.
+- **Canva Magic Layers route:** allowed only for non-quantitative explanatory figures such as methods pipelines, study-design diagrams, conceptual schematics, treatment/state diagrams, cohort flows, estimand/causal schematics, and graphical summaries. Read `references/canva-editable-figures.md`. Keep the coherent generated image as the PPTX evidence object and create an editable Canva companion design from that image. Record the companion workflow in the deck spec; do **not** claim that the PowerPoint figure itself is native-editable unless a Canva-exported PPTX is separately inspected and verified.
+
+Magic Layers is **forbidden** for quantitative/statistical evidence whose geometry or labels encode exact values: `forest-plot`, `effect-plot`, exact axes/ticks, CIs/CrIs, risk tables, Kaplan-Meier-style curves, balance/Love plots, or any figure where visual reconstruction could alter scientific meaning. Those remain deterministic/preserved; if full PowerPoint editability is required, rebuild deterministically with native chart/vector primitives instead of visual decomposition.
 
 ## Quantitative figures: deterministic only
 

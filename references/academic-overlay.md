@@ -83,6 +83,8 @@ Academic 不从零设计页面。对每一页：
 - 普通标题、正文、kicker、chrome、页码、表格、panel/card、hairline 与普通 slide layout 默认用 PowerPoint 原生元素；
 - 不要把普通 slide text 或普通版面 rasterize 成 `visualPlate`；
 - 对 scientific figure 采用白名单制，先读 `references/figure-generation-whitelist.md`：forest/effect plot、methods pipeline、study-design / conceptual / treatment-state / cohort-flow 等明确 figure 可作为一个 coherent generated/preserved image；
+- 用户明确要求编辑某个**非定量解释型 figure** 时，读 `references/canva-editable-figures.md`。如果 Canva connector 可用，可把 coherent generated image 交给 Magic Layers (`image-to-design`) 生成一个可编辑 Canva companion design；PPTX 仍默认保留原始 figure image。不要把“Canva 可编辑”写成“PowerPoint 原生可编辑”，除非最终 Canva-exported PPTX 已单独检查并验证 figure 内部对象可选中编辑；
+- `forest-plot` / `effect-plot`、精确坐标轴/tick、CI/CrI、risk table、KM/Love/balance 等定量证据禁止经过 Magic Layers 重构；需要 PowerPoint 全可编辑时只能 deterministic/native rebuild；
 - 白名单 figure 的内部轴、CI、节点标签、结果值可以一起被确定性渲染；但 slide title、footer、page chrome、普通正文仍保持 native；
 - 只有 WebGL / canvas / ASCII / complex CSS / map 等浏览器效果才使用 browser raster layer，并在 spec 里声明 `rasterPurpose`；
 - 版式 geometry、字体层级、留白和比例仍然必须来自 Guizang parent layout，而不是重新设计一个“类似 Guizang”的 PowerPoint。

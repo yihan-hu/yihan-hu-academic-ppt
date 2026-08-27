@@ -114,7 +114,11 @@ Recommended:
 - `takeaway`: scientific claim/question;
 - `evidenceTreatment`: preserve, relayout, redraw, annotate, expand-zoom;
 - `figureKind`: **required whenever the slide contains a whitelisted scientific figure**; omission is not an escape hatch. Read `references/figure-generation-whitelist.md`;
-- `allowNativeFigure`: exceptional escape hatch only when the user explicitly requested full editability; also require `userRequestedFullEditability: true` and a non-empty `nativeFigureReason`;
+- `allowNativeFigure`: exceptional native-PowerPoint escape hatch only when the user explicitly requested full PowerPoint editability; also require `userRequestedFullEditability: true` and a non-empty `nativeFigureReason`;
+- `editableFigureWorkflow`: optional figure editability route. Use `"canva-magic-layers"` only for non-quantitative explanatory figures and only when an editable Canva companion is actually created; use `"native-pptx"` for the native exception above;
+- `editableFigureSource`: path or stable asset reference for the exact image sent to Canva Magic Layers;
+- `canvaDesignId`: record only after `image-to-design` returns the created editable Canva design; this proves Canva editability, **not** PowerPoint-native editability;
+- `powerPointEditabilityVerified`: boolean; set `true` only after the final exported PPTX has been inspected and the intended figure internals are selectable/editable as native PowerPoint elements. A Canva design alone does not satisfy this field;
 - `backgroundColor`;
 - `elements`;
 - `tone`: optional `light` / `dark`; for KI Editorial, `dark` resolves to the deep-purple editorial field, never black. `dark` is allowed by semantic kind only (`cover`, `section`, `transition`, `synthesis`, `conclusion`, `closing`) unless `allowDarkContent:true` with a clear `darkReason`;
@@ -126,6 +130,8 @@ Recommended:
 ## Figure classification gate
 
 For every slide, classify the dominant evidence **before** drawing it. If the content is a forest/effect plot, methods pipeline, study-design/conceptual/treatment-state/state-transition/cohort/estimand/causal schematic, or graphical summary, set the matching `figureKind` and generate/preserve one figure picture. `meta.figurePolicy` must be `whitelist-enforced`. The validators also infer likely whitelist hits from labels/estimate patterns and primitive counts, so omitting `figureKind` will fail rather than silently reverting to PowerPoint boxes.
+
+When the user asks for figure editability, read `references/canva-editable-figures.md` before choosing a route. `editableFigureWorkflow: "canva-magic-layers"` means an editable **Canva companion design** exists while the PPTX may still contain the original coherent image. Never use that workflow for quantitative/statistical evidence or as proof of native PowerPoint editability.
 
 ## Text roles
 
