@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "transfer_id": "web-ki-editorial-20260827T1707Z",
+  "file_id": "1ditBAEDVcYAIlKVJ7txOSZ554KxZ8nk-",
+  "size": 2317485,
+  "sha256": "014f3a154a59fe7670ddf6e4ee6304b05ab861135d104f00aba3b1502c12e2e8",
+  "expected_base": "c06cc8570e72bc13a46ef6ef15f23ae0daae45a2",
+  "target_branch": "main"
+}
