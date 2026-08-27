@@ -1,0 +1,210 @@
+{
+  "source": "guizang-ppt-skill",
+  "files": [
+    {
+      "source": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "target": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "sha256": "5e4105e6eb3fba91356404f9cf326b54867ed9f2bb85136702619f6131879572"
+    },
+    {
+      "source": ".github/ISSUE_TEMPLATE/config.yml",
+      "target": ".github/ISSUE_TEMPLATE/config.yml",
+      "sha256": "aa1f3e0bda230b3d64bfe979b61302fb5231c8175f44360f385816c914d0ef3b"
+    },
+    {
+      "source": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "target": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "sha256": "9ac99498a0bfbaef113fd5e0051f3ad1af2163a348bf42914373c2ca8d8bf51b"
+    },
+    {
+      "source": ".github/ISSUE_TEMPLATE/question.yml",
+      "target": ".github/ISSUE_TEMPLATE/question.yml",
+      "sha256": "e42d5c6f95e1e8edf5a324d31d6cee9ba5cd403125fcdac6c3d69fb09546c2f9"
+    },
+    {
+      "source": ".github/pull_request_template.md",
+      "target": ".github/pull_request_template.md",
+      "sha256": "32cf673a6a613b48cfe79f41110aeee5d35a776b0d117f1d02b269c420d847da"
+    },
+    {
+      "source": ".gitignore",
+      "target": ".gitignore",
+      "sha256": "3337b5a532e15c3e79fe9bc5f00d45a0319b2d3e17a12dff9b62f416c6d6a74d"
+    },
+    {
+      "source": "CONTRIBUTING.md",
+      "target": "CONTRIBUTING.md",
+      "sha256": "ed95404a4919ad6bd43f569d0416346a763f93f1bfde400ee49bcb32686cb2ff"
+    },
+    {
+      "source": "LICENSE",
+      "target": "LICENSE",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "source": "README.en.md",
+      "target": "README.en.md",
+      "sha256": "f9d891a54aecfa351535cef0ce96c5cbcdfc5f76e6acf275ec9fc938803c604d"
+    },
+    {
+      "source": "README.md",
+      "target": "README.md",
+      "sha256": "237e33a266a3d387c6bba57ec7df8cf317effa3d1de91762e582d044f2c95a52"
+    },
+    {
+      "source": "SKILL.md",
+      "target": "references/guizang-original-skill.md",
+      "sha256": "a92ec69d983868a0831559cc6180b003990760782e042dc5e900f3962bb02f68"
+    },
+    {
+      "source": "SPONSORS.md",
+      "target": "SPONSORS.md",
+      "sha256": "8d7a7733da7f46db784cdd552a99b40d9b42a8c0b75b07f20e351dc9f310b8fd"
+    },
+    {
+      "source": "agents/openai.yaml",
+      "target": "references/guizang-original-openai.yaml",
+      "sha256": "351d546af30fce5edf961b68942e5ce417beaaad8e9eb1b441e27a1f9eb89d46"
+    },
+    {
+      "source": "assets/icon.svg",
+      "target": "assets/icon.svg",
+      "sha256": "49315dda7125ec5fc77ef5f2b96126d8b2121c6e72944b4702972e90f321d3ee"
+    },
+    {
+      "source": "assets/motion.min.js",
+      "target": "assets/motion.min.js",
+      "sha256": "45615c1e7639fb9828942d0689c897e745690b0f6df13022223c9409fc01557c"
+    },
+    {
+      "source": "assets/screenshot-backgrounds/style-a/dune.webp",
+      "target": "assets/screenshot-backgrounds/style-a/dune.webp",
+      "sha256": "6456386ea5b98bdd43fbef7e3c80b2527131f5580c3972aaff3d9a7a596031c0"
+    },
+    {
+      "source": "assets/screenshot-backgrounds/style-a/forest-ink.webp",
+      "target": "assets/screenshot-backgrounds/style-a/forest-ink.webp",
+      "sha256": "e6f9df859806344533b7425c64aed82e3dfbe1450ccb5fccbecdca9be0e3cfd2"
+    },
+    {
+      "source": "assets/screenshot-backgrounds/style-a/indigo-porcelain.webp",
+      "target": "assets/screenshot-backgrounds/style-a/indigo-porcelain.webp",
+      "sha256": "bb935571900303ae9d5febd04e1598e091bdf5bbdabd8766f8b108baaa5638f8"
+    },
+    {
+      "source": "assets/screenshot-backgrounds/style-a/kraft-paper.webp",
+      "target": "assets/screenshot-backgrounds/style-a/kraft-paper.webp",
+      "sha256": "0637a027068c2f14facbfca802efe98ed9bd35fd15bdfc47b65cddd53a054d9a"
+    },
+    {
+      "source": "assets/screenshot-backgrounds/style-a/monocle-classic.webp",
+      "target": "assets/screenshot-backgrounds/style-a/monocle-classic.webp",
+      "sha256": "96c4edc98c1facb6c5f4d636f2c80d2bfd073f8b510075a4a4959f3c55accdf0"
+    },
+    {
+      "source": "assets/screenshot-backgrounds/style-b/ikb-dot-gradient.webp",
+      "target": "assets/screenshot-backgrounds/style-b/ikb-dot-gradient.webp",
+      "sha256": "d0c43b937f1e61031fb5ff9daf5e91fd5032eba3cc72f40abd93b0d93c2fd092"
+    },
+    {
+      "source": "assets/screenshot-backgrounds/style-b/lemon-green-dot-shadow.webp",
+      "target": "assets/screenshot-backgrounds/style-b/lemon-green-dot-shadow.webp",
+      "sha256": "629eb0b45381d22bbc6a581d37cfc6c4a0e371570b8f8896619562a1420ab81c"
+    },
+    {
+      "source": "assets/screenshot-backgrounds/style-b/lemon-grid.webp",
+      "target": "assets/screenshot-backgrounds/style-b/lemon-grid.webp",
+      "sha256": "41391448c19c5d52c7f35e953f0a9172d3272f1934e1c597987014bba2e50cef"
+    },
+    {
+      "source": "assets/screenshot-backgrounds/style-b/safety-orange-halftone.webp",
+      "target": "assets/screenshot-backgrounds/style-b/safety-orange-halftone.webp",
+      "sha256": "324df63073f53b58a6424f8a56beecc66cfa28aa4831315d7f19e135780579a6"
+    },
+    {
+      "source": "assets/template-swiss.html",
+      "target": "assets/template-swiss.html",
+      "sha256": "aea71d9f80f19e23882c8bc765d6c8e81a342942e3efd3379404779b88a168ab"
+    },
+    {
+      "source": "assets/template.html",
+      "target": "assets/template.html",
+      "sha256": "f9b815564f3aec279278422d65e40b2a746f67b055d13a437ff9283bdb8a2db8"
+    },
+    {
+      "source": "references/checklist.md",
+      "target": "references/checklist.md",
+      "sha256": "add5fa7e6d359ec55c9c9d1ff4e282bf30e166d2748fddbf335c518f270ce2fc"
+    },
+    {
+      "source": "references/components.md",
+      "target": "references/components.md",
+      "sha256": "dca1b1d2476fde014f07217319f3ad90b8056255e221c680933b8db2aeddebb9"
+    },
+    {
+      "source": "references/image-prompts.md",
+      "target": "references/image-prompts.md",
+      "sha256": "dae1ce04bbeb75d5222dc2e5196d438af6512acbc125e91b1594b41a1850d6f8"
+    },
+    {
+      "source": "references/layouts-swiss.md",
+      "target": "references/layouts-swiss.md",
+      "sha256": "67172a003c89689648c5c0ad6792122127052760ab2a3cbed628fbb2a34a360f"
+    },
+    {
+      "source": "references/layouts.md",
+      "target": "references/layouts.md",
+      "sha256": "4c3743146af11b258dddca6d97a269e5ec90d446c5332b0da34327b3f6f1dca5"
+    },
+    {
+      "source": "references/pptx-hybrid.md",
+      "target": "references/pptx-hybrid.md",
+      "sha256": "ab44eb6c96f7cc524d7cd6bd0cf71ddcc0d023de4183c19fdeca3ed3ff07efe4"
+    },
+    {
+      "source": "references/screenshot-framing.md",
+      "target": "references/screenshot-framing.md",
+      "sha256": "981ee5f10878a7cf039d31092ba8e76da6cf37b06144ea464df85afe19ea940b"
+    },
+    {
+      "source": "references/swiss-layout-lock.md",
+      "target": "references/swiss-layout-lock.md",
+      "sha256": "e4ff59b2fe5fa409a4a5b252e05537f3be2642e04016b66509176585f4f4cb6e"
+    },
+    {
+      "source": "references/swiss-map-component.md",
+      "target": "references/swiss-map-component.md",
+      "sha256": "057db8cc245d2c3d760206dd73cd57a57e66c831ffc02c0c67ed799fc2092b8d"
+    },
+    {
+      "source": "references/themes-swiss.md",
+      "target": "references/themes-swiss.md",
+      "sha256": "eec246cd44a1674990d6fe614ee32a59912695c317279a1b86d2710db0319bc8"
+    },
+    {
+      "source": "references/themes.md",
+      "target": "references/themes.md",
+      "sha256": "a4bee3ef7b22d56fb904b0643a117368d85f0265ceccdf5111ad497fe22cc656"
+    },
+    {
+      "source": "scripts/check-pptx-hybrid.py",
+      "target": "scripts/check-pptx-hybrid.py",
+      "sha256": "d7b0e7b020baa7700a29911f41f04494446f3d8228de7bd380c3e5a22cae5e19"
+    },
+    {
+      "source": "scripts/prepare-pptx-raster-html.py",
+      "target": "scripts/prepare-pptx-raster-html.py",
+      "sha256": "c90cae0bd215e884bfd2b0992eb7aa9aca936ad2c3d558762a95875391d6129d"
+    },
+    {
+      "source": "scripts/render-pptx.mjs",
+      "target": "scripts/render-pptx.mjs",
+      "sha256": "6cd08981abb6e067ba1d317a9a5aa80d0baa6792cd6a2e76e4b404fcef75727b"
+    },
+    {
+      "source": "scripts/validate-swiss-deck.mjs",
+      "target": "scripts/validate-swiss-deck.mjs",
+      "sha256": "66158ce5ce763b5886567a073a15d9b189521e5ac8e109782cb2451686dbeca1"
+    }
+  ]
+}

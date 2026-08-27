@@ -1,0 +1,69 @@
+{
+  "name": "Karolinska Institutet",
+  "source": "user-supplied Defense slides final.pptx",
+  "accent": "840050",
+  "accentOn": "FFFFFF",
+  "logos": {
+    "light": "assets/brands/ki-logo-white.png",
+    "accent": "assets/brands/ki-logo-accent.png"
+  },
+  "approvedSecondary": [],
+  "observedSecondary": [
+    {
+      "color": "4F0433",
+      "note": "deep plum field repeatedly used in supplied Defense deck"
+    },
+    {
+      "color": "840050",
+      "note": "dominant magenta presentation accent in supplied Defense deck"
+    },
+    {
+      "color": "D9D9D9",
+      "note": "neutral grey fill repeatedly used in supplied Defense deck"
+    },
+    {
+      "color": "DDD0D5",
+      "note": "pale plum-grey fill used in supplied Defense deck"
+    },
+    {
+      "color": "8F587B",
+      "note": "muted plum used for secondary text/lines in supplied Defense deck"
+    },
+    {
+      "color": "FD8169",
+      "note": "coral highlight used selectively in supplied Defense deck"
+    }
+  ],
+  "doNotInherit": [
+    "Study I-IV persistent navigation",
+    "source PowerPoint title geometry",
+    "source PowerPoint fonts",
+    "source table/card geometry",
+    "source footer/date/page chrome"
+  ],
+  "id": "ki",
+  "baseStyle": "swiss",
+  "templateAsset": "assets/template-ki-swiss.html",
+  "neutralPolicy": "inherit-guizang",
+  "themeSource": "Guizang Swiss geometry + Defense-derived KI presentation accent",
+  "themeTokens": {
+    "paper": "FAFAF8",
+    "ink": "0A0A0A",
+    "grey1": "F0F0EE",
+    "grey2": "D4D4D2",
+    "grey3": "737373",
+    "accent": "840050",
+    "accentOn": "FFFFFF"
+  },
+  "aliasOf": "ki-swiss",
+  "logoPolicy": {
+    "fit": "contain",
+    "preserveAspectRatio": true,
+    "cadence": [
+      "cover",
+      "closing",
+      "section"
+    ],
+    "normalContentDefault": false
+  }
+}

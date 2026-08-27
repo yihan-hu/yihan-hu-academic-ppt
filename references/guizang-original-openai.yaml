@@ -1,0 +1,13 @@
+interface:
+  display_name: Guizang PPT
+  short_description: 生成电子杂志风或瑞士国际主义演讲 deck，支持单文件 HTML、混合可编辑 PPTX，以及 HTML + PPTX 双输出；PPTX
+    中保留原生文字/形状/图片，仅局部栅格化 WebGL、canvas、复杂 CSS 和地图视觉。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

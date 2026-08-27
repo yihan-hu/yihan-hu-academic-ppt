@@ -1,0 +1,134 @@
+{
+  "name": "Karolinska Institutet",
+  "source": "user-supplied Defense slides final.pptx",
+  "accent": "840050",
+  "accentOn": "FFFFFF",
+  "logos": {
+    "light": "assets/brands/ki-logo-white.png",
+    "accent": "assets/brands/ki-logo-accent.png"
+  },
+  "approvedSecondary": [],
+  "observedSecondary": [
+    {
+      "color": "4F0433",
+      "note": "deep plum field used for semantic dark fields and bounded semantic bands on light slides"
+    },
+    {
+      "color": "840050",
+      "note": "dominant KI magenta presentation accent"
+    },
+    {
+      "color": "6F6B6D",
+      "note": "neutral secondary reading/caption tone for academic light pages"
+    },
+    {
+      "color": "EFE8EB",
+      "note": "very pale KI pink-grey panel/header fill"
+    },
+    {
+      "color": "F7F3F5",
+      "note": "near-white KI pink-grey table stripe"
+    },
+    {
+      "color": "D9D9D9",
+      "note": "neutral hairline/separator only, not broad card fill"
+    },
+    {
+      "color": "FD8169",
+      "note": "semantic result/risk highlight used sparingly"
+    },
+    {
+      "color": "DDD0D5",
+      "note": "observed but too heavy for default academic fill; not approved by default"
+    },
+    {
+      "color": "8F587B",
+      "note": "observed muted plum; not approved as default academic secondary text"
+    }
+  ],
+  "doNotInherit": [
+    "Study I-IV persistent navigation",
+    "source PowerPoint title geometry",
+    "source PowerPoint fonts",
+    "source table/card geometry",
+    "source footer/date/page chrome"
+  ],
+  "id": "ki-editorial",
+  "baseStyle": "editorial",
+  "templateAsset": "assets/template-ki-editorial.html",
+  "neutralPolicy": "style-a-theme-block",
+  "themeSource": "Guizang Style A geometry/typography + Defense-derived KI presentation palette",
+  "themeTokens": {
+    "ink": "4F0433",
+    "inkRgb": "79,4,51",
+    "paper": "FFFFFF",
+    "paperRgb": "255,255,255",
+    "paperTint": "EFE8EB",
+    "inkTint": "840050"
+  },
+  "brandColorRoles": {
+    "4F0433": "deep KI plum for semantic dark editorial fields and at most one bounded semantic band on a light slide",
+    "111111": "neutral reading ink for ordinary body/explanation/table text on light pages",
+    "840050": "default light-page slide title plus compact semantic labels, numbering, monoline icons/arrows and key navigation cues; never paragraph ink",
+    "6F6B6D": "neutral secondary text/caption color",
+    "EFE8EB": "very pale KI pink-grey for stronger grouping/header/macro fields; use selectively rather than as a default card fill",
+    "F7F3F5": "near-white KI pink-grey for subtle equal peer panels and table body stripes",
+    "D9D9D9": "hairline/separator only; avoid large fills",
+    "FD8169": "semantic result highlight only; never general decoration"
+  },
+  "tableTokens": {
+    "headerFill": "EFE8EB",
+    "stripeFill": "F7F3F5",
+    "bodyFill": "FFFFFF",
+    "gridColor": "D9D9D9",
+    "headerRule": "840050"
+  },
+  "presentationTokens": {
+    "readingInk": "111111",
+    "mutedInk": "6F6B6D",
+    "slideTitle": "840050",
+    "semanticLabel": "840050",
+    "iconStroke": "840050",
+    "arrowStroke": "840050",
+    "peerPanelFill": "F7F3F5",
+    "groupingFill": "EFE8EB",
+    "panelFill": "EFE8EB",
+    "tableStripeFill": "F7F3F5",
+    "semanticBandFill": "4F0433",
+    "semanticBandOn": "FFFFFF",
+    "semanticBandMaxPerLightSlide": 1,
+    "semanticBandCoverageMax": 0.18,
+    "accentAreaSoftMax": 0.08,
+    "neutralRule": "D9D9D9",
+    "resultAccent": "FD8169",
+    "maxDarkSlideRatio": 0.2,
+    "semanticDarkKinds": [
+      "cover",
+      "section",
+      "transition",
+      "synthesis",
+      "conclusion",
+      "closing"
+    ],
+    "macroFieldFill": "EFE8EB",
+    "ghostIndexFill": "F7F3F5",
+    "macroFieldPolicy": "optional-guizang-visual-mass",
+    "maxSmallPeerPanelsWithoutMacroField": 3,
+    "macroFieldMaxCoverage": 0.3,
+    "paleFillMaxCoverageLightSlide": 0.3,
+    "paleFillHighCoverageThreshold": 0.15,
+    "paleFillHighCoverageMaxDeckRatio": 0.35,
+    "unexpectedColorPolicy": "reject-non-token-colors",
+    "macroFieldGuidance": "Allow up to three equal F7F3F5 peer panels when content is genuinely parallel; use EFE8EB macro-fields selectively to solve unbalanced whitespace, not as a required fill."
+  },
+  "logoPolicy": {
+    "fit": "contain",
+    "preserveAspectRatio": true,
+    "cadence": [
+      "cover",
+      "closing",
+      "section"
+    ],
+    "normalContentDefault": false
+  }
+}
