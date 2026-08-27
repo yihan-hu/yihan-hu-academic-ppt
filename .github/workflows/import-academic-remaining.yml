@@ -19,8 +19,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat .import/xs* | base64 --decode > /tmp/academic-remaining.tar.xz
-          tar -xJf /tmp/academic-remaining.tar.xz
+          cat .import/blob* | base64 --decode > /tmp/academic-remaining.tar.gz
+          tar -xzf /tmp/academic-remaining.tar.gz
           rm -rf .import
           rm -f .github/workflows/import-guizang-baseline.yml
           rm -f .github/workflows/import-academic-remaining.yml
