@@ -1,0 +1,41 @@
+name: Export Main Bundle
+
+on:
+  push:
+    branches:
+      - repair-skill-upload-20260820
+    paths:
+      - '.github/export-main-bundle-request.txt'
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout control branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build pinned Git bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          source_sha="$(tr -d '[:space:]' < .github/export-main-bundle-request.txt)"
+          [[ "$source_sha" =~ ^[0-9a-f]{40}$ ]]
+          git cat-file -e "$source_sha^{commit}"
+          git branch -f bundle-source "$source_sha"
+          git bundle create /tmp/academic-ppt.bundle bundle-source
+          printf '%s\n' "$source_sha" > /tmp/source-sha.txt
+          sha256sum /tmp/academic-ppt.bundle | tee /tmp/bundle-sha256.txt
+      - name: Upload Git bundle artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: academic-ppt-main-git-bundle
+          path: |
+            /tmp/academic-ppt.bundle
+            /tmp/source-sha.txt
+            /tmp/bundle-sha256.txt
+          if-no-files-found: error
+          retention-days: 1
