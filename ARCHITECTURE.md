@@ -30,4 +30,4 @@ flowchart TD
 
 ## External boundaries
 
-The skill may use the normal slide-generation, browser-render, filesystem, and PowerPoint/PPTX tooling required by the Guizang workflow. It does not route figure editability through Canva Magic Layers.
+The skill may use the normal slide-generation, browser-render, filesystem, and PowerPoint/PPTX tooling required by the Guizang workflow. Figure editability remains within the native PowerPoint/deterministic figure workflow; no external decomposition path is part of the runtime.
