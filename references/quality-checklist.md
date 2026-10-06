@@ -57,10 +57,20 @@
 - Key adjustment variables and interactions are retained when interpretation depends on them.
 - Assumptions and sensitivity analyses are not omitted solely for aesthetics.
 
+## Story / teaching fidelity
+
+- For a planner handoff, `case_setup`, `case_steps`, `protected_sequence`, `concept_revealed_after_case`, `must_preserve`, and approved speaker notes are preserved.
+- A concrete case is not replaced by an abstract slogan, framework, generic pipeline, or unordered card set.
+- If `concept_revealed_after_case` is present, that concept or takeaway does not appear in an earlier title, subtitle, navigation label, callout, or opening graphic.
+- Dense protected content is split across slides rather than deleted or abstracted away.
+- No orientation / synthesis / meta-summary slide was invented unless the user or approved storyboard calls for it.
+- A reference deck supplied for flow / 方案 is treated as a narrative reference by default; unrelated claims, branding, and geometry are not copied without request.
+
 ## Presentation hierarchy
 
-- Slide title is a claim or question, not a generic label when possible.
-- Evidence is the dominant visual element on result slides.
+- Slide titles identify what the audience is looking at. In teaching/case-driven sequences, prefer neutral descriptive labels or questions until the case has earned the takeaway.
+- Claim-style titles are acceptable after the supporting evidence/case has been shown or when the user explicitly prefers headline-style slides.
+- Evidence or the concrete example is the dominant visual element on result/case slides.
 - Repeated result layouts are consistent.
 - Navigation is stable only when the current deck genuinely needs persistent navigation; single-study decks should not invent Study I-IV chrome.
 - Decorative elements do not compete with scientific evidence.

@@ -9,7 +9,20 @@
 - 不再建立独立的 `A01-A12` 视觉版式体系。Academic 语义只用于**选择现有 Sxx**，不能成为新的 geometry source。
 - 先读 `references/academic-content-mapping.md`，然后回到 `references/swiss-layout-lock.md` / `references/layouts-swiss.md` 选真实 Sxx。
 
-## 2. Template-first 是最高设计规则
+## 2. Story / case fidelity 是 P0
+
+当输入包含 PPT Planner 的 production handoff，或属于 teaching / conceptual / failure-case deck，或用户提供旧 deck 作为 flow / 方案 / speaking-style 参考时，先读 `references/story-fidelity.md`。
+
+**内容语义和叙事顺序高于视觉抽象。** Planner / user 决定 audience 先看到什么、后看到什么；Academic PPT 只决定如何用 Guizang 版式清楚地呈现。
+
+- 保留 `case_setup`、`case_steps`、`protected_sequence`、`concept_revealed_after_case`、`must_preserve` 与 approved speaker notes。
+- 不得把完整案例压成 slogan、framework、generic pipeline 或 unordered card set。
+- 不得在 title / subtitle / navigation / opening graphic 中提前写出被后置的 concept 或 takeaway。
+- 不得自行增加 orientation / synthesis / meta-summary 页来“解释这套 PPT 在干什么”。
+- `must_preserve` 或 protected sequence 放不下时，优先拆成连续两页；不要删掉中间失败步骤或抽象成一句总结。
+- 用户说“参考这个 flow / 方案”时，默认把参考 deck 当 narrative reference，而不是 layout/brand source。除非用户另行要求，不复制其科学结论、branding 或 geometry。
+
+## 3. Template-first 是最高设计规则
 
 Academic 不从零设计页面。对每一页：
 
@@ -27,7 +40,7 @@ Academic 不从零设计页面。对每一页：
 
 不得再写 `Axx → Sxx` 双层布局代码。
 
-## 3. Scientific fidelity
+## 4. Scientific fidelity
 
 读：
 - `references/scientific-fidelity.md`
@@ -47,7 +60,7 @@ Academic 不从零设计页面。对每一页：
 - publication/statistical figure 默认 `contain`，不得裁 axis、legend、risk table、panel label、CI/CrI。
 - 高密度不是错误；先重构层级、拆页或 overview → focus，不要自动删科学信息。
 
-## 4. 学术内容必须直接映射 Guizang Sxx
+## 5. 学术内容必须直接映射 Guizang Sxx
 
 读 `references/academic-content-mapping.md`。常用原则：
 
@@ -64,7 +77,7 @@ Academic 不从零设计页面。对每一页：
 
 这些只是**选择建议**，最终 geometry 完全服从原 Sxx。
 
-## 5. 机构/学校模板 = Brand Overlay，不是第二套 layout
+## 6. 机构/学校模板 = Brand Overlay，不是第二套 layout
 
 如果用户提供机构/学校/实验室 PPT、brand deck、旧模板或 logo 参考，必须读 `references/brand-overlay.md`。
 
@@ -76,7 +89,7 @@ Academic 不从零设计页面。对每一页：
 
 除非用户明确要求“沿用机构 PPT 的版式”，不得从机构 PPT 复制它的标题位置、导航、卡片、表格 geometry、默认字体层级来覆盖 Guizang。
 
-## 6. PPTX native-first
+## 7. PPTX native-first
 
 原 Guizang `references/pptx-hybrid.md` 继续作为 inherited baseline；Academic PPTX 以 `references/pptx-fidelity.md` 与 `references/deck-spec.md` 的 **native-first override** 为准。
 
@@ -89,7 +102,7 @@ Academic 不从零设计页面。对每一页：
 
 Academic renderer 是原 Guizang renderer 的**增量能力**，不能修改原 Guizang baseline 文件。
 
-## 7. PPTX 可打开性是 P0
+## 8. PPTX 可打开性是 P0
 
 任何 renderer 直接输出只算 `deck.raw.pptx`，不得交付。
 
@@ -101,7 +114,7 @@ python <SKILL_ROOT>/scripts/finalize-pptx.py deck.raw.pptx deck.pptx --brand-pro
 
 要求 ZIP/OOXML/relationships 可解析；有 office engine 时必须真实打开、重存、再解析、转 PDF/图片验证。后续任何 XML patch 都会使认证失效，必须重新 finalization。
 
-## 8. QA 顺序
+## 9. QA 顺序
 
 Academic 交付必须按以下顺序：
 
@@ -115,7 +128,7 @@ Academic 交付必须按以下顺序：
 
 如果肉眼“不像 Guizang”，即使所有结构测试通过也算失败。先检查：是否真的从模板/Sxx 开始、是否自创 geometry、display typography 是否由模板保真、是否把 institution PPT 当成 layout source。
 
-## 8. Brand profiles are mechanical overlays, not design prompts
+## 10. Brand profiles are mechanical overlays, not design prompts
 
 When a user supplies an institutional template, read `references/brand-overlay.md` and `references/brand-profile.md` before making any branded slide.
 

@@ -1,6 +1,6 @@
 ---
 name: academic-ppt
-description: 在完整继承 Guizang PPT 原始规则、模板、版式、主题、截图、动效、HTML/PPTX 工作流与 QA 的基础上，增加学术演示适配。用于论文汇报、conference talk、seminar、lab meeting、PhD defense、methods/technical talk、科研图表/表格重构，以及将学校/机构模板作为品牌层叠加到 Guizang 设计上的场景。默认先执行 Guizang 原规则；Academic 层只允许对科学信息保真、结果页重复、科研图表/表格、机构品牌 overlay、native-first PPTX 和可打开性验证做明确增量覆盖，禁止另造视觉系统。
+description: 在完整继承 Guizang PPT 原始规则、模板、版式、主题、截图、动效、HTML/PPTX 工作流与 QA 的基础上，增加学术演示适配。用于论文汇报、conference talk、seminar、lab meeting、PhD defense、methods/technical/conceptual teaching talk、科研图表/表格重构，以及将学校/机构模板作为品牌层叠加到 Guizang 设计上的场景。默认先执行 Guizang 原规则；Academic 层只允许对科学信息保真、教学叙事保真、结果页重复、科研图表/表格、机构品牌 overlay、native-first PPTX 和可打开性验证做明确增量覆盖，禁止另造视觉系统。
 ---
 
 # Academic PPT · Guizang Base + Academic Overlay
@@ -8,6 +8,8 @@ description: 在完整继承 Guizang PPT 原始规则、模板、版式、主题
 > **Fork contract / P0:** 本 Skill 不是“参考 Guizang 重新设计”的学术模板。它先完整执行下面的 **原 Guizang SKILL 正文**，再应用 `references/academic-overlay.md` 中列出的少量 Academic 覆盖。除 overlay 明确点名的条款外，原 Guizang 规则全部保持有效。
 >
 > 开始任何 academic deck 前，先读 `references/academic-overlay.md`。如果用户提供学校/机构/实验室 PPT 或品牌参考，再读 `references/brand-overlay.md` 和 `references/brand-profile.md`。不要用 Academic 语义层替代 Guizang 的 S01-S22 / template geometry；Academic 只决定“内容怎么装进原模板”。
+
+> **Story/case fidelity P0:** 当输入是 PPT Planner 已批准的 storyboard、teaching/conceptual deck、failure-case deck，或用户提供旧 PPT 作为 flow / 方案 / speaking-style 参考时，先读 `references/story-fidelity.md` 再选版式。内容语义和叙事顺序高于视觉抽象：保留 `case_setup`、`case_steps`、`protected_sequence`、`concept_revealed_after_case`、`must_preserve` 与已批准 speaker notes。不得把具体案例改写成 slogan / framework，不得提前揭示被后置的概念，不得自行增加 orientation / synthesis / “what this means” 元总结页。受保护内容放不下时优先拆页，不得为了整洁而删掉或抽象掉。参考 deck 可以只提供 narrative / speaking-style 参照，不自动成为 layout 或 brand source。
 >
 > **Brand P0:** institutional branding must be a frozen token overlay, never a fresh palette/design pass. Analyze the supplied PPTX with `scripts/inspect-brand-template.py`, freeze/select a brand profile, apply it to Guizang HTML with `scripts/apply-brand-profile.py`, reuse the same profile in `deck-spec.json`, and pass `scripts/check-brand-token-lock.py`. Swiss branding locks Guizang neutrals and replaces the single accent token; Style A branding locks the original six-variable ink/paper theme block. Never invent per-component colors.
 >

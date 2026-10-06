@@ -5,6 +5,8 @@
 | Academic content shape | 优先 Guizang layout | 说明 |
 |---|---|---|
 | research question / hypothesis | S03 / S09 / S10 | statement 优先，不要做传统大学标题页 |
+| concrete teaching example / prompt or code fragment | S08 / S11 | 具体例子是主角；保留实际片段，不先写 takeaway |
+| chronological failure / patch sequence | S11 / S17 / repeated S08 | 保持顺序；必要时拆页，不改成无序的 S13/S19 peer cards |
 | single core finding | S03 / S09 / S12 | 用大结论建立 attention |
 | cohort / registry / study design | S17 / S11 | system diagram 或 timeline |
 | inclusion / exposure / follow-up timeline | S11 / S02 | 时间轴 |
