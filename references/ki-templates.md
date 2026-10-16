@@ -1,6 +1,6 @@
 # KI Preset Templates
 
-The Academic PPT skill contains two first-class KI presets. Both are derivative Guizang templates, not newly designed KI layouts.
+The Academic PPT skill includes two Guizang-derived KI presets and one independent native-PowerPoint KI-template starter. Existing Guizang locks are unchanged.
 
 ## 1. KI x Swiss
 
@@ -66,12 +66,23 @@ The logo artwork keeps its intrinsic supplied brand color; do not recolor the bi
 
 When a `KI x Electronic Magazine` slide contains a native editable scientific table, also read `references/ki-editorial-tables.md`. Keep it as a real table, but default to the Defense-derived filled editorial banding: very pale pink-grey header, then body rows alternating **white first** and near-white pink-grey. Do not default to a publication three-line table or a line-only table. Keep effect estimate + CI in one cell and emphasize important results with same-size bold, never enlargement.
 
+## 3. KI-template — Neutral Ivory Academic
+
+- Preset ID: `ki-template`
+- Profile: `references/brands/ki-template.json`
+- Generator: `scripts/build-ki-template.py`
+- Editable starter: `assets/templates/KI-template-starter.pptx`
+- Design contract: `references/ki-template.md`
+- Palette: cover `#4F0433`, paper `#FAFAF8`, panels `#F7F0F4`, accent `#870052`.
+- Independent native PPTX design; not a Guizang variant.
+
 ## Selection rule
 
-When the user asks for a KI deck and does not specify a Guizang family, ask them to choose one of:
+When the user requests a KI deck without selecting a known style, offer:
 
 - `KI x Swiss`
 - `KI x Electronic Magazine`
+- `KI-template` (the approved editable neutral-ivory academic style)
 
 If the current conversation already makes the choice explicit, do not ask again.
 

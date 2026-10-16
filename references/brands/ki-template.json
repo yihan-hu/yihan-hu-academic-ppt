@@ -1,0 +1,36 @@
+{
+  "id": "ki-template",
+  "name": "KI-template — Neutral Ivory Academic",
+  "source": "User-approved KI ALS serology presentation, October 2026; cover artwork already bundled",
+  "baseStyle": "native-pptx",
+  "templateAsset": "assets/templates/KI-template-starter.pptx",
+  "generator": "scripts/build-ki-template.py",
+  "tokens": {
+    "cover": "4F0433",
+    "paper": "FAFAF8",
+    "panel": "F7F0F4",
+    "white": "FFFFFF",
+    "accent": "870052",
+    "heading": "302330",
+    "body": "302A30",
+    "muted": "736A73",
+    "rule": "E7E3E6"
+  },
+  "logo": "assets/brands/ki-logo-white.png",
+  "logoPolicy": {
+    "preserveAspectRatio": true,
+    "cadence": [
+      "cover",
+      "rare section divider"
+    ],
+    "ordinarySlide": false
+  },
+  "designRules": [
+    "Cover: full-bleed deep plum; white KI logo near upper-right; no network decoration",
+    "Body: neutral ivory, native editable shapes/text, generous whitespace",
+    "Use blush-plum panel only for semantic grouping; do not use pink or blue full-slide backgrounds",
+    "Use one accent and grey in forest/effect plots; keep intervals and scales source-valid",
+    "Slide archetypes: cover, rationale, study methods, concise table, effect hero, forest plot, conclusions",
+    "Keep existing ki-swiss and ki-editorial presets unchanged"
+  ]
+}
